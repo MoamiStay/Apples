@@ -13,12 +13,14 @@
   </head>
   <!-- COMMENT TIME!  -->
   <body>
+    <header>
     <h1>PLAYGROUND</h1>
     <h2>You're not gonna find much intelligent stuff here.. </h2>
     <p title="Apples are soft and squishy.">
       Hover over me to learn about apples
     </p>
     <!-- larger than / greater than  -->
+  </header>
 
     <div class="topics">
     <h2>LINKS!</h2>
@@ -193,24 +195,24 @@
 </details>
 
 <h3>figure (I don't get it..)</h3>
-<p>The figure tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.</p>
-<p>While the content of the &lt;figure&gt; element is related to the main flow, its positio is independent of the main flow, and if removed it should not affect the flow of the document.</p>
-<p>The &lt;figcaption&gt; tag defines a caption for a &lt;figure&gt; element. The &lt;figcaption&gt; element can be placed as the first or last child of the &lt;figure&gt; element. </p>
+<p>
+  The figure tag specifies self-contained content, like illustrations, 
+  diagrams, photos, code listings, etc.</p>
+  
+  <p>While the content of the &lt;figure&gt; element is related to the main 
+  flow, its positio is independent of the main flow, and if removed it 
+  should not affect the flow of the document.</p>
+
+  <p>The &lt;figcaption&gt; tag defines a caption for a &lt;figure&gt; element. 
+  The &lt;figcaption&gt; element can be placed as the first or last child of 
+  the &lt;figure&gt; element. </p>
 <figure>
   <img src="images/undefined/apple.jpg" alt="apple">
   <figcaption>One possible rendering of semantic elements</figcaption>
 </figure>
 </div>
 
-
-
-
-
-
-
-
-
-
+<div class="topic">
 <hr>
     <h3 id="section-veggies">Eat your veggies</h3>
     <pre>
@@ -226,5 +228,115 @@
       officiis autem ad reiciendis amet magnam corporis alias labore explicabo
       rem aut! Et, neque!
     </pre>
-  </body>
+  </div>
+
+    <div class="topics">
+      <h2>CSS!</h2>
+      <h3>Universal selector:</h3>
+      <p>
+        The CSS Universal Selector (*) selects all HTML elements on the page.</p>
+        <div class="syntax">
+          <pre>
+        * { padding: 0; margin: 0; }
+      </pre>
+      </div>
+      <p>
+        Instead of writing declarations for each selector individually
+        you can separate each selector with a comma:</p>
+
+        <div class="syntax">
+          <pre>
+       h1, h2, h3 {text-align: center; color: Maroon; }
+       </pre>
+      </div>
+
+      <p>Tip!</p>
+      <p>ID and CLASS names can NOT start with a number.</p>
+      <p>Do not add space between property valu and the unit | margin-left: 20 px; (X) magin-left: 20px; (O)</p>
+      <p>/* COMMENT */</p>
+
+      <p>_________</p>
+
+      <p>There are three ways of inserting a style sheet to a web page:</p>
+      <p>- External css: CSS-file added through link in &lt;head&gt;: &lt;link rel="stylesheet" href="css/styles.css"&gt;</p>
+      <p>- Internal css: Adding a &lt;styles&gt; tag in &lt;head&gt;</p>
+      <p>- inline css: integrating the css within the html code: &lt;h1 style="coloor: DeepSkyBlue; text-align: center;"&gt;</p>
+    </div>
+
+    <div class="topics">
+      <h2>PSEUDO-CLASSES!</h2>
+      <p>
+        pseudo-classes are used to:
+      </p>
+      <ul>
+        <li>Style an element whien a user mouses over it</li>
+        <li>Style visited and unvisited links differently</li>
+        <li>Style an element when it gets focus</li>
+      </ul>
+      <p>Syntax:</p>
+      <div class="syntax">
+      <pre>
+        selector:pseudo-class {
+          property: value;
+        }
+      </pre>
+      </div>
+
+      <p>Different ways of displaying links with actions:</p>
+      <div class="syntax">
+        <pre>
+          a:link { color: yellow; }
+        </pre>
+        <pre>
+          a:visited { color: red; }
+        </pre>
+        <pre>
+          a:hover { color: white; }
+        </pre>
+        <pre>
+          a:active { color: pink; }
+        </pre>
+      </div>
+
+      <a href="index.html" class="pseudo-test"> Visit Moami_Stay!</a>
+      <p>Note!</p>
+      <p>a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective!</p>
+      <p>Likewise a:active MUST come after a:hover ! Psuedo-class names are not case-sensitive.</p>
+      <p> Also..</p>
+      <p>Pseudo-classes can be combined with CSS classes:</p>
+      <div class="syntax">
+        <pre>
+          a.highlight:hover {
+            color: red;
+          }
+        </pre>
+        </div>
+        <p>Pseudo-classes can also be used on other elements like the &lt;div&gt; element:</p>
+        <div class="syntax">
+          <pre>
+            div:hover {
+              background-color: green;
+            }
+          </pre>
+      </div>
+      </div>
+  <div class="child-testing">
+        <h3>:first-child and :last-child *BROKEN*</h3>
+        <p>Hi im baby 1!</p>
+        <p>Hi im baby 2, no one cares about me.. </P>
+        <p>Hi im baby 3, not me either</p>
+        <p>Hi im baby three, I'm stylish!</p>
+      </div>
+
+  <div class="topics">
+    <h2>CHEAT SHEETS!</h2>
+      <p>Cheat sheet for SELECTORS:</p>
+      <img src="images/undefined/selectors.jpg" alt="cheat sheet for selectors"/>
+     <p>Cheat sheet for COMBINATORS:</p>
+    <img src="images/undefined/combinators.jpg" alt="cheat sheet for combinators"/>
+  </div>
+<div class="topics">
+  <p>here comes some new stuff  -> 1.4 and 2.1 and 2.2 hopefully</p>
+</div>
+  </body> 
 </html>

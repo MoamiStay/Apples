@@ -1,11 +1,64 @@
 body {
-  background-color: #fff;
+  background-color: rgb(15, 15, 15);
+}
+
+header {
+  color: rgb(172, 172, 172);
+}
+
+a {
+  text-decoration: none;
+  color: aquamarine;
+}
+
+div {
+  color: rgb(172, 172, 172);
+  padding: 50px;
+}
+
+.syntax {
+  margin-right: 2000px;
+  margin-bottom: 20px;
+  padding: 0px;
+  padding-right: 60px !important;
+  display: inline-block;
+  background-color: rgb(151, 150, 150);
+  color: rgb(39, 39, 39);
 }
 
 .topics:nth-child(even) {
-  background-color: rgb(169, 226, 248);
+  background-color: rgb(25, 15, 65);
 }
 
 .topics:nth-child(odd) {
-  background-color: rgb(167, 247, 209);
+  background-color: rgb(59, 7, 53);
+}
+
+a.pseudo-test:link {
+  color: rgb(248, 250, 123);
+}
+
+a.pseudo-test:visited {
+  color: brown;
+}
+
+a.pseudo-test:hover {
+  color: azure;
+}
+
+a.pseudo-test:active {
+  color: pink;
+}
+
+p.child-testing:first-child {
+  color: red;
+}
+
+.child-testing p::first-letter {
+  color: orange;
+  font-size: 2em;
+}
+
+h2::before {
+  content: url(https://www.geek.no/noroff/stuff/star.png);
 }
