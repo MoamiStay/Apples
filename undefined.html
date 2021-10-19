@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="HTML, CSS" />
-    <meta
-      name="description"
-      content="This is where you put the description for this webpage."
-    />
+    <meta name="description" content="This is where you put the description for this webpage."/>
+    <meta author="Regine Naas">
+
     <link href="css/styles.css" rel="stylesheet" />
     <title>PLAYGROUND</title>
   </head>
@@ -20,6 +19,8 @@
       Hover over me to learn about apples
     </p>
     <!-- larger than / greater than  -->
+
+    <div class="topics">
     <h2>LINKS!</h2>
     <a href="index.html">Moami_Stay</a>
     <a
@@ -29,25 +30,26 @@
       <img src="images/skyhead.jpg" alt="A beautiful pink sky" />
     </a>
     <!-- An image-link to a youtube video + tooltip on hover -->
-    <div id="apple-img-download">
         <a href="images/apple.jpg"
           download><img src="images/undefined/apple.jpg" alt="an apple">click on the image or this link =)</a>
           <p>
             If you want to download this image you can just click on it
-          </p>
-      </div></a
-    >
+          </p></a>
     <!-- Create a download link to the original image -->
     <a href="#section-veggies">This link will take you to the veggie section</a>
     <!-- Link to specific place on the same page (scroll to-> )-->
     <a href="index.html" target="_blank">This link will open in a new tab</a>
+  </div>
 
+    <div class="topics">
     <h2>TEXT ALTERATIONS!</h2>
 <br> 
 <p>Here is a &lt;br&gt; tag used to create a line of space. <em>Try to avoid using this tho.</em> (&lt;em&gt;)And right below you find a &lt;hr&gt; tag. aka horizontal  ruler.<strong>and btw &lt;strong&gt; is how you bold text using html</strong>i and b tag means italic and bold, however em and strong means important.</p>
 <p><small>you can make the text small by using the &lt;small&gt; tag.</small></p>
 <p><sub>This is subscript text (&lt;sub&gt;)</sub> and <sup>this is superscript text (&lt;sup&gt;)</sup></p>
+</div>
 
+<div class="topics">
 <h2>QUOTATION!</h2>
 <h3>short quotation</h3>
 <p>Quote of choice: <q>아니아니왜왜걸루가왜왜아왜왜~아왜왜왜왜왜아 <em>왜애<sup>애애</sup><sub>애애~~</sub></em> !</q></p>
@@ -55,8 +57,160 @@
 <p>Here is a wiki article about floccinaucinihilipilification:</p>
 <blockquote cite="https://en.wiktionary.org/wiki/floccinaucinihilipilification">Often cited as the longest non-technical word in the English language, being one letter longer than the commonly cited antidisestablishmentarianism. It is the longest word ever recorded by Hansard after Conservative MP Jacob Rees-Mogg used the word in Parliament on 21st February 2012.</blockquote>
 <p>This is a paragraph with a couple of abbreviations. (wait.. what's the difference between <abbr title="I don't know what to put here">this</abbr> and just</p><p title="I'm confuss..">title??)</p>
+</div>
 
+<div class="topics">
 <h2>LISTS!</h2>
+<h3>Unordered list:</h3>
+<ul style="list-style-type: disc">
+  <li>disc style</li>
+</ul>
+<ul style="list-style-type: circle">
+  <li>circle style</li>
+</ul>
+<ul style="list-style-type: square">
+  <li>square style</li>
+</ul>
+<ul style="list-style-type: none">
+  <li>none style</li>
+</ul>
+<h3>Ordered list:</h3>
+<ol style="list-style-type: lower-roman">
+  <li>I love Roman</li>
+</ol>
+<ol style="list-style-type: lower-greek">
+  <li>I prefer Greek</li>
+</ol>
+<h3>Description lists</h3>
+<dl>
+  <dt>BTS</dt>
+  <dd>Beyond the Scene or previously Bulletproof Boyscouts.</dd>
+  <dt>TXT</dt>
+  <dd>Tomorrow x Together. Let's face the challenges of tomorrow together.</dd>
+  <dt>SKZ</dt>
+  <dd>STRAY KIDS WOOH!</dd>
+</dl>
+</div>
+
+<div class="topics">
+<h2>TABLES!</h2>
+<table>
+  <caption>This is a caption</caption>
+  <tr>
+    <th>header one</th>
+  <th>header two</th>
+  <!--(Header = bold and centered by default)-->
+</tr>
+<tr>
+  <td>cell 1</td>
+  <td>cell 2</td>
+</tr>
+<tr>
+  <td>cell 3</td>
+  <td>cell 4</td>
+</tr>
+<tr>
+  <td>cell 5</td>
+  <td>cell 6</td>
+</tr>
+</table>
+</div>
+
+<div class="topics">
+<h2>FORMS!</h2>
+<p>Select one from the menu:</p>
+<form action="" method="get">
+  <select name="Option">
+    <option value=0>Select and option</option>
+    <option value="a">Option a</option>
+    <option value="b">Option b</option>
+    <option value="c">Option c</option>
+  </select>
+
+  <p>Select a browser from the dropdown (you can type-ahead)</p>
+  <input list="vegetables">
+  <datalist id="vegetables">
+    <option value="broccoli">
+    <option value="carrot">
+    <option value="potato">
+  </datalist>
+
+<fieldset>
+  <legend> Select one (you may click lables):</legend>
+  <label for="radioa">cats</label>
+  <input type="radio" name="animal" id="radioa" value="cats">
+  <label for="radiob">dogs</label>
+  <input type="radio" name="animal" id="radiob" value="dogs">
+</fieldset>
+
+<fieldset>
+  <legend>Select any extras for your burger:</legend>
+  <label for="bacon">Bacon</label>
+  <input type="checkbox" name="burger" id="bacon" value="bacon">
+
+  <label for="cheese">Cheese</label>
+  <input type="checkbox" name="burger" id="cheese" value="cheese">
+
+  <label for="tomato">Bacon</label>
+  <input type="checkbox" name="burger" id="tomato" value="tomato">
+
+  <label for="pickled_cucumber">Pickled Cucumber</label>
+  <input type="checkbox" name="burger" id="pickled_cucumber" value="pickled_cucumber">
+</fieldset>
+
+<label for="fname">First Name:</label>
+<input type="text" name="firstname" id="fname">
+
+<label for="lname">Last Name</label>
+<input type="text" name="lastname" id="lname">
+
+<p>Points/Scale:</p>
+<input type="range" name="points" min="0" max="10>">
+
+<input type="submit" value="Submit">
+</form>
+</div>
+
+<div class="topics">
+  <h2>SEMANTIC ELEMENTS AND DOCUMENT STRUCTURE!</h2>
+<p>Use stuff like..</p>
+<ul>
+  <li>&lt;header&gt;</li>
+  <li>&lt;main&gt;</li>
+  <li>&lt;nav&gt;</li>
+  <li>&lt;aside&gt;</li>
+  <li>&lt;section&gt;</li>
+  <li>&lt;article&gt;</li>
+  <li>&lt;figure&gt;</li>
+  <li>&lt;footer&gt;</li>
+</ul>
+
+<h3>Details dropdown tab</h3>
+<details>
+  <summary>WWH</summary>
+  <p>aka JJANN!</p>
+  <img src="images/undefined/JJANN.jpg" alt="JJANN!">
+</details>
+
+<h3>figure (I don't get it..)</h3>
+<p>The figure tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.</p>
+<p>While the content of the &lt;figure&gt; element is related to the main flow, its positio is independent of the main flow, and if removed it should not affect the flow of the document.</p>
+<p>The &lt;figcaption&gt; tag defines a caption for a &lt;figure&gt; element. The &lt;figcaption&gt; element can be placed as the first or last child of the &lt;figure&gt; element. </p>
+<figure>
+  <img src="images/undefined/apple.jpg" alt="apple">
+  <figcaption>One possible rendering of semantic elements</figcaption>
+</figure>
+</div>
+
+
+
+
+
+
+
+
+
+
 <hr>
     <h3 id="section-veggies">Eat your veggies</h3>
     <pre>

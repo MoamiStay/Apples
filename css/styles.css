@@ -2,6 +2,10 @@ body {
   background-color: #fff;
 }
 
-#apple-img-download {
-  background-color: burlywood;
+.topics:nth-child(even) {
+  background-color: rgb(169, 226, 248);
+}
+
+.topics:nth-child(odd) {
+  background-color: rgb(167, 247, 209);
 }
