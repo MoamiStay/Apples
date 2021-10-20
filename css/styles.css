@@ -62,3 +62,27 @@ p.child-testing:first-child {
 h2::before {
   content: url(https://www.geek.no/noroff/stuff/star.png);
 }
+
+form {
+  margin: 0 auto; /*center the form on the page (vertical)*/
+  width: 400px; /*max-width makes the box dynamic size-wise, but it reaches a maximum size of 400pixels*/
+  /*Form outline*/
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li + li {
+  margin-top: 1em;
+  /*colors all except the the list element. Don't worry about not understanding why.
+  This concept works will other stuff that repeats as well; such as table: TR,TD*/
+}
+
+/*margin: 8px 0; (8px over/under and 0 left/right side
+border-radius: 4px; (rounded corners*/
