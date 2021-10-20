@@ -1,37 +1,94 @@
 body {
-  background-color: rgb(15, 15, 15);
+  background-color: #000;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
-header {
-  color: rgb(172, 172, 172);
+.headline {
+  font-family: "Press Start 2P", Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 3px;
+  text-align: center;
+  color: aliceblue;
+  margin-top: 50px;
+  background-color: #000;
+}
+
+.header-sub {
+  text-decoration: none;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.5rem;
+  margin-bottom: 50px;
+}
+
+.header-sub::before {
+  content: none;
+}
+
+#moami_stay {
+  float: right;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.button {
+  display: inline-block;
+  background-color: brown;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 100px;
+  font-family: "Press Start 2P", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  font-family: "Press Start 2P", Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 2px;
+  color: aliceblue;
+}
+
+h3 {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.ricklink {
+  background-color: rgba(29, 13, 62, 255);
+  padding: 0px;
+}
+
+.troll-head {
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+.theapple a {
+  display: inline-block;
+  margin-left: 35%;
+  color: rgba(29, 13, 62, 255);
 }
 
 a {
   text-decoration: none;
-  color: aquamarine;
+  color: aliceblue;
 }
 
 div {
   color: rgb(172, 172, 172);
-  padding: 50px;
+  padding: 1px;
 }
 
 .syntax {
-  margin-right: 2000px;
-  margin-bottom: 20px;
-  padding: 0px;
-  padding-right: 60px !important;
-  display: inline-block;
-  background-color: rgb(151, 150, 150);
+  background-color: rgb(185, 185, 185);
   color: rgb(39, 39, 39);
 }
 
 .topics:nth-child(even) {
-  background-color: rgb(25, 15, 65);
+  background-color: rgb(59, 7, 53);
+  padding: 50px;
 }
 
 .topics:nth-child(odd) {
-  background-color: rgb(59, 7, 53);
+  background-color: rgba(29, 13, 62, 255);
+  padding: 50px;
 }
 
 a.pseudo-test:link {
@@ -61,6 +118,7 @@ p.child-testing:first-child {
 
 h2::before {
   content: url(https://www.geek.no/noroff/stuff/star.png);
+  margin-right: 15px;
 }
 
 form {
@@ -86,3 +144,114 @@ ul li + li {
 
 /*margin: 8px 0; (8px over/under and 0 left/right side
 border-radius: 4px; (rounded corners*/
+
+.default-size {
+  color: bisque;
+}
+.pixel-size {
+  font-size: 10px;
+}
+
+.em-size {
+  font-size: 1em;
+}
+
+.rem-size {
+  font-size: 1rem;
+}
+
+.italic-style {
+  font-style: italic;
+}
+
+.oblique-style {
+  font-style: oblique;
+}
+
+.bolder-weight {
+  font-weight: bolder;
+}
+
+.bold-weight {
+  font-weight: bold;
+}
+
+.normal-weight {
+  font-weight: normal;
+}
+
+.light-weight {
+  font-weight: 200;
+}
+
+.lighter-weight {
+  font-weight: lighter;
+}
+
+.uppercase-trans {
+  text-transform: uppercase;
+}
+
+.lowercase-trans {
+  text-transform: lowercase;
+}
+
+.capitalize-trans {
+  text-transform: capitalize;
+}
+
+.full-width-trans {
+  text-transform: full-width;
+}
+
+.underline-deco {
+  text-decoration: underline;
+}
+
+.overline-deco {
+  text-decoration: overline;
+}
+
+.line-through-deco {
+  text-decoration: line-through;
+}
+
+#FONTS {
+  color: aquamarine;
+  text-shadow: 7px 7px 7px rgb(0, 106, 114);
+  text-shadow: 3px 3px 4px rgb(204, 1, 204);
+}
+
+.just-a-box-with-some-text {
+  width: 200px;
+  background-color: black;
+}
+
+.left-text {
+  color: azure;
+  text-align: left;
+}
+
+.centered-text {
+  color: azure;
+  text-align: center;
+}
+
+.right-text {
+  color: azure;
+  text-align: right;
+}
+
+.justified-text {
+  color: azure;
+  text-align: justify;
+}
+
+.lineheight-one {
+  line-height: 2;
+}
+
+.letter-word-spacing {
+  letter-spacing: 4px;
+  word-spacing: 4px;
+}
