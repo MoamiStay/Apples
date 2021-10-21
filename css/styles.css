@@ -76,7 +76,6 @@ div {
   padding: 1px;
 }
 
-*,
 .syntax {
   background-color: rgb(185, 185, 185);
   color: rgb(39, 39, 39);
@@ -257,4 +256,36 @@ border-radius: 4px; (rounded corners*/
 .letter-word-spacing {
   letter-spacing: 4px;
   word-spacing: 4px;
+}
+
+#imagea {
+  max-width: 100%;
+  height: auto;
+}
+
+#imageb {
+  width: 300px;
+  border-radius: 50%;
+}
+
+#imagec {
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  padding: 5px;
+  width: 150px;
+}
+
+#imagec:hover {
+  box-shadow: 0 0 10px 10px rgba(0, 140, 186, 0.5);
+}
+
+div.polaroid {
+  width: 50%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
 }
