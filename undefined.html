@@ -25,7 +25,31 @@
   <!-- COMMENT TIME!  -->
 
   <body>
+    <div id="top"></div>
     <header>
+      <nav class="vertical-menu">
+        <h2>MENU</h2>
+        <a href="#top" class="top_bot_nav"><b>TOP</b></a>
+        <ul>
+          <li><a href="#text-alterations-t">Text Alteration</a></li>
+          <li><a href="#quotation-t">Quotation</a></li>
+          <li><a href="#lists-t">Lists</a></li>
+          <li><a href="#tables-t">Tables</a></li>
+          <li><a href="#forms-t">Forms</a></li>
+          <li><a href="#semantic_elements-t">Semantic Elements</a></li>
+          <li><a href="#css-t">CSS</a></li>
+          <li><a href="#pseudo_calsses-t">Pseudo Classes</a></li>
+          <li><a href="#cheat_sheets-t">Cheat Sheets</a></li>
+          <li><a href="#fonts-t">Fonts</a></li>
+          <li><a href="#images-t">Images</a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+        <a href="#the_end" class="top_bot_nav" id="bottom-button"
+          ><b>BOTTOM</b></a
+        >
+      </nav>
+
       <div id="moa">
         <a href="index.html" id="moami_stay" class="button">Moami_Stay</a>
       </div>
@@ -75,7 +99,7 @@
       </div>
     </div>
 
-    <div class="topics text_alterations-t">
+    <div class="topics text_alterations-t" id="text-alterations-t">
       <h2>TEXT ALTERATIONS!</h2>
       <br />
       <p>
@@ -97,7 +121,7 @@
       </p>
     </div>
 
-    <div class="topics quotation-t">
+    <div class="topics quotation-t" id="quotation-t">
       <h2>QUOTATION!</h2>
       <h3>short quotation</h3>
       <p>
@@ -126,7 +150,7 @@
       <p title="I'm confuss..">title??)</p>
     </div>
 
-    <div class="topics lists-t">
+    <div class="topics lists-t" id="lists-t">
       <h2>LISTS!</h2>
       <h3>Unordered list:</h3>
       <ul style="list-style-type: disc">
@@ -168,7 +192,7 @@
       </dl>
     </div>
 
-    <div class="topics tables-t">
+    <div class="topics tables-t" id="tables-t">
       <h2>TABLES!</h2>
       <table>
         <caption>
@@ -194,7 +218,7 @@
       </table>
     </div>
 
-    <div class="topics forms-t">
+    <div class="topics forms-t" id="forms-t">
       <h2>FORMS!</h2>
       <p>Select one from the menu:</p>
       <form action="where/to/send" method="get">
@@ -266,7 +290,7 @@ NAME = is used to label the info that is sent (user_name: Name)
 -->
     </div>
 
-    <div class="topics semantic_elements-t">
+    <div class="topics semantic_elements-t" id="semantic_elements-t">
       <h2>SEMANTIC ELEMENTS AND DOCUMENT STRUCTURE!</h2>
       <p>Use stuff like..</p>
       <ul>
@@ -319,7 +343,7 @@ NAME = is used to label the info that is sent (user_name: Name)
       />
     </div>
 
-    <div class="topics css-t">
+    <div class="topics css-t" id="css-t">
       <h2>CSS!</h2>
       <h3>Universal selector:</h3>
       <p>
@@ -365,7 +389,7 @@ NAME = is used to label the info that is sent (user_name: Name)
       </p>
     </div>
 
-    <div class="topics pseudo_classes-t">
+    <div class="topics pseudo_classes-t" id="pseudo_calsses-t">
       <h2>PSEUDO-CLASSES!</h2>
       <p>pseudo-classes are used to:</p>
       <ul>
@@ -440,7 +464,7 @@ NAME = is used to label the info that is sent (user_name: Name)
       <p>Hi im baby three, I'm stylish!</p>
     </div>
 
-    <div class="topics cheat_sheets-t">
+    <div class="topics cheat_sheets-t" id="cheat_sheets-t">
       <h2>CHEAT SHEETS!</h2>
       <p>Cheat sheet for SELECTORS:</p>
       <img
@@ -454,7 +478,7 @@ NAME = is used to label the info that is sent (user_name: Name)
       />
     </div>
 
-    <div class="topics fonts-t">
+    <div class="topics fonts-t" id="fonts-t">
       <h2 id="FONTS">FONTS!</h2>
       <div class="syntax">
         <pre>
@@ -546,34 +570,52 @@ NAME = is used to label the info that is sent (user_name: Name)
       </div>
     </div>
 
-    <div class="topics images-t">
+    <div class="topics images-t" id="images-t">
       <h2>IMAGES!</h2>
       <p></p>
-      <img
-        src="images/undefined/veggies-vocabulary-in-english.png"
-        id="imagea"
-        alt="Image of veggies"
-      />
-      <p>This is the default image</p>
-      <img
-        src="images/undefined/veggies-vocabulary-in-english.png"
-        id="imageb"
-        alt="Image of veggies"
-      />
-      <img
-        src="images/undefined/veggies-vocabulary-in-english.png"
-        id="imagec"
-        alt="Image of veggies"
-      />
-      <div class="polaroid">
-        <img
-          src="images/undefined/veggies-vocabulary-in-english.png"
-          alt="Image of veggies"
+      <picture>
+        <source
+          srcset="images/undefined/dedcat.jpg"
+          media="(min-width: 800px)"
         />
-        <div class="container">
-          <p>Vegetables are good 4 u</p>
-        </div>
+        <img
+          src="images/undefined/nagisafunny.jpg"
+          alt="big dedcat small funny nag"
+        />
+      </picture>
+      <div class="syntax">
+        <pre>
+          Shorthand code for background image:
+          
+          body { background: #ffffff url("cute_cat.png") no-repeat right top; }
+        </pre>
       </div>
+      <img
+        src="images/undefined/tomoya.jpg"
+        id="imageb"
+        alt="Image of tomoya"
+      />
+      <img
+        src="images/undefined/nagisa.jpg"
+        id="imagea"
+        alt="Image of nagisa"
+      />
+      <figure class="polaroid">
+        <img src="images/undefined/tomoyaognagisa.jpg" alt="Image of veggies" />
+        <figcaption>So cute~ ㅠㅠ</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <img src="images/undefined/figo.jpg" alt="Image of veggies" />
+        <figcaption>Handsome</figcaption>
+      </figure>
+    </div>
+
+    <div id="the_end"></div>
+
+    <div id="footer">
+      <footer>
+        <p>The end. welcome</p>
+      </footer>
     </div>
   </body>
 </html>

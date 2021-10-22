@@ -3,6 +3,36 @@ body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
+nav {
+  position: fixed;
+  margin-left: 5px;
+}
+
+nav li {
+  margin-top: 40px;
+}
+
+nav li:last-child {
+  margin-bottom: 40px;
+}
+
+nav li a:hover {
+  color: rgb(255, 154, 243);
+}
+
+nav li a:checked {
+  margin-left: 5px;
+  font-size: 1rem;
+}
+
+nav h2::before {
+  content: none;
+}
+
+.top_bot_nav:hover {
+  color: rgb(255, 154, 243);
+}
+
 .headline {
   font-family: "Press Start 2P", Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 3px;
@@ -42,6 +72,7 @@ h2 {
   font-family: "Press Start 2P", Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 2px;
   color: aliceblue;
+  line-height: 1.5;
 }
 
 h3 {
@@ -71,24 +102,30 @@ a {
   color: aliceblue;
 }
 
+div img {
+  max-width: 100%;
+}
+
 div {
+  margin-left: 200px;
   color: rgb(172, 172, 172);
   padding: 1px;
+  max-width: 100%;
 }
 
 .syntax {
   background-color: rgb(185, 185, 185);
   color: rgb(39, 39, 39);
   margin: 0;
-  padding: 0;
+  padding-top: 10px;
 }
 
-.topics:nth-child(even) {
+.topics:nth-child(odd) {
   background-color: rgb(59, 7, 53);
   padding: 50px;
 }
 
-.topics:nth-child(odd) {
+.topics:nth-child(even) {
   background-color: rgba(29, 13, 62, 255);
   padding: 50px;
 }
@@ -259,33 +296,61 @@ border-radius: 4px; (rounded corners*/
 }
 
 #imagea {
-  max-width: 100%;
+  max-width: 250px;
   height: auto;
+  margin: 20px 30px 20px 0;
+  display: inline-block;
 }
 
 #imageb {
-  width: 300px;
+  max-width: 400px;
+  height: auto;
   border-radius: 50%;
+  margin: 20px 30px 20px 0;
+  display: inline-block;
 }
 
 #imagec {
   border: 1px solid #ddd;
   border-radius: 0px;
   padding: 5px;
-  width: 150px;
+  width: 170px;
+  display: inline-block;
 }
 
-#imagec:hover {
-  box-shadow: 0 0 10px 10px rgba(0, 140, 186, 0.5);
+#imagea:hover {
+  box-shadow: 0 0 10px 10px rgba(252, 130, 236, 0.5);
 }
 
-div.polaroid {
-  width: 50%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+#imageb:hover {
+  box-shadow: 0 0 10px 10px rgba(130, 183, 252, 0.5);
 }
 
-div.container {
+.polaroid {
+  width: 20%;
+  padding: 20px;
+  background-color: rgb(22, 22, 22);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+figure img {
+  width: 100%;
+}
+
+figcaption {
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px;
+}
+
+.images-t {
+  background-image: url("../images/icons/pixel-heart.png");
+  background-size: 300px;
+}
+
+.images-t h2 {
+  background-color: #000;
+  display: inline-block;
+  padding: 10px;
 }
