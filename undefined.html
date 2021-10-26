@@ -17,6 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
 
     <link href="css/styles.css" rel="stylesheet" />
     <title>PLAYGROUND</title>
@@ -42,6 +48,12 @@
           <li><a href="#cheat_sheets-t">Cheat Sheets</a></li>
           <li><a href="#fonts-t">Fonts</a></li>
           <li><a href="#images-t">Images (very cute)</a></li>
+          <li><a href="#icons-t">Icons</a></li>
+          <li><a href="#floats_flexes_grids-t">Floats, Flexes and Grids</a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
           <li><a href="#"></a></li>
           <li><a href="#"></a></li>
         </ul>
@@ -585,9 +597,11 @@ NAME = is used to label the info that is sent (user_name: Name)
       </picture>
       <div class="syntax">
         <pre>
-          Shorthand code for background image:
-          
+          background-image Shorthand:
           body { background: #ffffff url("cute_cat.png") no-repeat right top; }
+          
+          background-color Shorthand:
+          header { background: cover no-repeat url("../images/header.jpg") }
         </pre>
       </div>
       <img
@@ -610,8 +624,87 @@ NAME = is used to label the info that is sent (user_name: Name)
       </figure>
     </div>
 
-    <div id="the_end"></div>
+    <div class="topics icons-t" id="icons-t">
+      <h2>ICONS <i class="fas fa-user-astronaut"></i></h2>
+      <p>From Font-Awesome..</p>
+      <p>
+        Just add the Script tag (you find it on your profile) and add it to
+        head. Then just paste the link for each individual icon wherever you
+        want it <i class="far fa-kiss-wink-heart"></i>
+      </p>
+    </div>
 
+    <div class="topics floats_flexes_grids-t" id="floats_flexes_grids-t">
+      <h2>FLOATS, FLEXES AND GRIDS !</h2>
+      <h3>CLEAR / CLEARFIX</h3>
+      <div class="clear_problem clearx">
+        <h3>FIGO</h3>
+        <img src="images/undefined/figo.jpg" alt="my dog" />
+        <p>
+          This div does not posess the clearfix attribute and therefore the
+          image will overflow outside the div because of the large proportion.
+          To avoid the next div to overlap with this one, use clearfix.
+        </p>
+      </div>
+      <div class="clear_fix clearx">
+        <h3>FIGO</h3>
+        <img src="images/undefined/figo.jpg" alt="my dog" />
+        <p>
+          Clearfix is used and therefore the image is contained within the
+          border of the div.
+        </p>
+        <pre class="syntax">
+          .clearfix::after {
+            clear: both;
+            content: "";
+            display: table;
+          }
+        </pre>
+      </div>
+      <h3>POSITIONS</h3>
+      <p>STATIC - RELATIVE - ABSOLUTE - FIXED - STICKY</p>
+      <p>_____________</p>
+      <p>STATIC = Default</p>
+      <p>
+        RELATIVE = The element stays within the normal flow of the document, but
+        is adjusted according to the top, right, bottom or left set on the
+        element.
+      </p>
+      <div class="relativex">
+        <p>I've got no attributes.</p>
+        <p class="imrelative">position:_relative top:_20px; left:_20px;</p>
+      </div>
+      <p>
+        ABSOLUTE = Moves the element out of the normal flow of the document. It
+        sets its positioning based on the next parent element to have relative
+        or absolute positioning. If there is no element with positioning, then
+        it will default to the viewport.
+      </p>
+      <div class="absolutex">
+        <p>I've got no attributes.</p>
+        <p class="imabsolute">position:_relative; top:_20px; left:_20px;</p>
+      </div>
+      <p>
+        FIXED = Also movese the element out of the normal flow (similar to
+        absolute), but with fixed positioning the element is unaffected by
+        scrolling.
+      </p>
+      <p>
+        STICKY = A mix between relative positioning and fixed positioning. It
+        allows us to set an element relatively positioned, and when a certain
+        position is reached to turn it into a fixed element.
+      </p>
+      <p>
+        Z-INDEX = With positioning, it's easy to get elements on top of one
+        another. To determine the order in which elements stack up, we can use
+        z-index. Z-index is fairly simple to use; the higher the z-index number,
+        the higher in the order it goes.
+      </p>
+    </div>
+
+    <!-- THE END -->
+
+    <div id="the_end"></div>
     <div id="footer">
       <footer>
         <p>The end. welcome</p>

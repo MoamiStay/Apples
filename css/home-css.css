@@ -140,6 +140,10 @@ h1 {
   height: 300px;
 }
 
+.tracks ul {
+  padding-left: 0px;
+}
+
 .album {
   display: inline-block;
   width: 50%;

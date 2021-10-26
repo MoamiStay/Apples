@@ -3,6 +3,10 @@ body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
+div {
+  max-width: 100%;
+}
+
 nav {
   position: fixed;
   margin-left: 5px;
@@ -353,4 +357,56 @@ figcaption {
   background-color: #000;
   display: inline-block;
   padding: 10px;
+}
+
+.clearx h3 {
+  margin: 0px;
+}
+
+.clearx img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  float: right;
+}
+
+.clear_problem {
+  border: 1px solid white;
+  clear: left;
+  margin-bottom: 100px;
+}
+
+.clear_fix {
+  border: 1px solid white;
+}
+
+.clear_fix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+div .syntax {
+  display: inline-block;
+}
+
+.relativex {
+  border: 1px solid white;
+}
+
+.relativex .imrelative {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+.absolutex {
+  border: 1px solid white;
+}
+
+.absolutex .imabsolute {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  /* Where did it go??? */
 }
