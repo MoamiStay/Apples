@@ -1,11 +1,34 @@
-body {
+/*body {
   background-color: black;
   margin: 0;
   padding: 0;
   background-image: url(../images/home/finalish.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: minmax(100px, auto);
+  grid-template-areas:
+    "myheader"
+    "mynav"
+    "mymain"
+    "myfooter";
+}
+
+header {
+  grid-area: myheader;
+}
+
+nav {
+  grid-area: mynav;
+}
+
+main {
+  grid-area: mymain;
+}
+
+footer {
+  grid-area: myfooter;
 }
 
 #logo {
@@ -23,7 +46,7 @@ body {
   color: black;
 }
 
-.top_menu ul {
+nav ul {
   list-style-type: none;
   padding: 0;
   background-color: azure;
@@ -32,12 +55,12 @@ body {
   text-align: center;
 }
 
-.top_menu li {
+nav li {
   display: inline-block;
   margin-right: 50px;
 }
 
-.top_menu a {
+nav a {
   text-decoration: none;
   width: 150px;
   display: inline-block;
@@ -47,7 +70,7 @@ body {
   font-family: "Julius Sans One", sans-serif;
 }
 
-.top_menu a:hover {
+nav a:hover {
   color: cadetblue;
   transition: color 0.2s ease-in-out;
   text-decoration: underline;
@@ -69,6 +92,28 @@ h1 {
 
 .bulk-text:first-child {
   margin-top: 250px;
+}
+
+#bird {
+  position: relative;
+  bottom: 0px;
+  left: 0;
+}
+
+/* HERE COMES THE MUSIC SECTION */
+
+#artists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  grid-template-areas:
+    "artist artist artist"
+    "artist artist artist"
+    "artist artist artist";
+}
+
+.artist-list li {
+  grid-area: artist;
 }
 
 .artist-list {
