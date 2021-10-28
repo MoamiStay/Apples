@@ -675,17 +675,16 @@ NAME = is used to label the info that is sent (user_name: Name)
         <p class="imrelative">position:_relative top:_20px; left:_20px;</p>
       </div>
       <p>
-        ABSOLUTE = Moves the element out of the normal flow of the document. It
-        sets its positioning based on the next parent element to have relative
-        or absolute positioning. If there is no element with positioning, then
-        it will default to the viewport.
+        ABSOLUTE = Moves the element out of the normal flow of the document. The
+        parent element MUST have a relative or absolute positioning. If there is
+        no element with positioning, then it will default to the viewport.
       </p>
       <div class="absolutex">
         <p>I've got no attributes.</p>
         <p class="imabsolute">position:_relative; top:_20px; left:_20px;</p>
-      </div>
+        </div>
       <p>
-        FIXED = Also movese the element out of the normal flow (similar to
+        FIXED = Also moves the element out of the normal flow (similar to
         absolute), but with fixed positioning the element is unaffected by
         scrolling.
       </p>
@@ -700,7 +699,80 @@ NAME = is used to label the info that is sent (user_name: Name)
         z-index. Z-index is fairly simple to use; the higher the z-index number,
         the higher in the order it goes.
       </p>
-    </div>
+      <h3>FLEX</h3>
+      <a href="https://jonitrythall.com/flexbox-cheatsheet"
+      >Useful cheatsheet for flex</a>
+      <div class="flexx">
+        <div class="box">BOX 1</div>
+        <div class="box">BOX 2</div>
+        <div class="box">BOX 3</div>
+        <div class="box">BOX 4</div>
+        <div class="box">BOX 5</div>
+        <div class="box6">BOX 6</div>
+      </div>
+      <p>DISPLAY: FLEX</p>
+      <p>Set display: flex on the container. Use flex: [number] to decide the amount of space each element will take.</p>
+
+      <div class="flex-direction">
+        <div class="boxd">BOX 1</div>
+        <div class="boxd">BOX 2</div>
+        <div class="boxd">BOX 3</div>
+        <div class="boxd">BOX 4</div>
+        <div class="boxd">BOX 5</div>
+        <div class="boxd">BOX 6</div>
+      </div>
+      <p>FLEX-DIRECTION: </p>
+      <p>Set flex-direction: column/row. use row-reverse and column-reverse instead to get the opposite order.</p>
+
+      <div class="flex-wrap">
+        <div class="boxw">BOX 1</div>
+        <div class="boxw">BOX 2</div>
+        <div class="boxw">BOX 3</div>
+        <div class="boxw">BOX 4</div>
+        <div class="boxw">BOX 5</div>
+        <div class="boxw">BOX 6</div>
+      </div>
+      <p>FLEX: WRAP</p>
+      <p>I DONT UNDERSTAND. HELP.</p>
+
+      <p>ORDER</p>
+
+      <p>JUSTIFY-CONTENT</p>
+      <div class="justifyx">
+        <div class="boxj">BOX 1</div>
+        <div class="boxj">BOX 2</div>
+        <div class="boxj">BOX 3</div>
+        <div class="boxj">BOX 4</div>
+        <div class="boxj">BOX 5</div>
+        <div class="boxj">BOX 6</div>
+      </div>
+      <p>justify-content values: center, start/end, space-between/space-around/space-evenly</p>
+      <h3>GRIDS</h3>
+      <div class="gridx">
+        <div class="boxg">BOX 1</div>
+        <div class="boxg">BOX 2</div>
+        <div class="boxg">BOX 3</div>
+        <div class="boxg">BOX 4</div>
+        <div class="boxg">BOX 5</div>
+        <div class="boxg">BOX 6</div>
+      </div>
+      <p>DISPLAY: GRID</p>
+
+      <div class="grid_body">
+        <div class="grid_header">Header</div>
+        <div class="grid_nav">Navigation</div>
+        <div class="grid_main">Main</div>
+        <div class="grid_footer">Footer</div>
+      </div>
+
+    <!--
+
+      @media (max-width: 480px)
+      ul{
+        flex-direction: column;
+      }
+      
+    -->
 
     <!-- THE END -->
 

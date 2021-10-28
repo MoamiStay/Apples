@@ -3,10 +3,6 @@ body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
-div {
-  max-width: 100%;
-}
-
 nav {
   position: fixed;
   margin-left: 5px;
@@ -402,11 +398,113 @@ div .syntax {
 
 .absolutex {
   border: 1px solid white;
+  position: relative;
 }
 
 .absolutex .imabsolute {
   position: absolute;
   top: 20px;
   left: 20px;
-  /* Where did it go??? */
+}
+
+.flexx {
+  display: flex;
+  width: 50%;
+  margin: 0;
+  background-color: darkslategray;
+}
+
+.box {
+  flex: 1;
+  margin: 0;
+}
+
+.box6 {
+  flex: 5;
+  margin: 0;
+  background-color: rgb(101, 0, 145);
+}
+
+.flex-direction {
+  background-color: darkslategray;
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 50%;
+  margin: 0;
+}
+
+.flex-wrap {
+  display: flex;
+  margin: 0;
+}
+
+.boxw {
+  flex-wrap: nowrap;
+  background-color: darkslategray;
+  max-width: 50%;
+  margin: 0;
+}
+
+.justifyx {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.boxj {
+  margin: 0;
+  background-color: darkslategray;
+}
+
+.gridx {
+  display: grid;
+  max-width: 50%;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr auto;
+  grid-gap: 10px;
+  background-color: rgb(101, 0, 145);
+  margin: 0;
+}
+
+.boxg {
+  background-color: darkslategray;
+  margin: 0;
+}
+
+.grid_header {
+  grid-area: grid-header;
+  margin: 0;
+  background-color: darkviolet;
+}
+
+.grid_nav {
+  grid-area: grid-nav;
+  margin: 0;
+  background-color: rgb(196, 18, 113);
+}
+
+.grid_main {
+  grid-area: grid-main;
+  margin: 0;
+  background-color: rgb(3, 114, 151);
+}
+
+.grid_footer {
+  grid-area: grid-footer;
+  margin: 0;
+  background-color: forestgreen;
+}
+
+.grid_body {
+  max-width: 50%;
+  display: grid;
+  background-color: gainsboro;
+  margin: 0;
+  grid-gap: 10px;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  grid-template-areas:
+    "grid-header grid-header grid-header grid-header grid-header grid-nav grid-nav grid-nav  grid-nav"
+    "grid-main grid-main grid-main grid-main grid-main grid-main grid-main grid-main grid-main"
+    "grid-footer grid-footer grid-footer grid-footer grid-footer grid-footer grid-footer grid-footer grid-footer";
 }
