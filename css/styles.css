@@ -8,6 +8,10 @@ nav {
   margin-left: 5px;
 }
 
+.hamburger {
+  display: none;
+}
+
 nav li {
   margin-top: 40px;
 }
@@ -336,7 +340,7 @@ border-radius: 4px; (rounded corners*/
 }
 
 figure img {
-  width: 100%;
+  max-width: 100%;
 }
 
 figcaption {
@@ -507,4 +511,93 @@ div .syntax {
     "grid-header grid-header grid-header grid-header grid-header grid-nav grid-nav grid-nav  grid-nav"
     "grid-main grid-main grid-main grid-main grid-main grid-main grid-main grid-main grid-main"
     "grid-footer grid-footer grid-footer grid-footer grid-footer grid-footer grid-footer grid-footer grid-footer";
+}
+
+@media screen and (max-width: 600px) {
+  .syntax {
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-left: 30px;
+    letter-spacing: 0;
+  }
+
+  #moa {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  div {
+    margin: 0;
+  }
+
+  #imageb {
+    max-width: 300px;
+  }
+
+  .headline {
+    margin-top: 0;
+  }
+
+  header {
+    position: sticky;
+    top: 0px;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 10px;
+  }
+
+  nav.hamburger {
+    display: none;
+    position: relative;
+    top: 0px;
+    left: -18px;
+    /* By default hide the navigation menu */
+  }
+
+  input#hamburger-menu {
+    display: none; /* Hide the checkbox */
+  }
+
+  input#hamburger-menu:checked ~ nav.hamburger {
+    display: block;
+    /* Display nav.hamburger block when checkbox is checked only */
+  }
+
+  label[for="hamburger-menu"] {
+    font-size: 3em;
+  }
+
+  nav.hamburger ul {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    width: 120px;
+    background-color: rgb(0, 0, 0);
+  }
+  nav.hamburger li {
+    margin-bottom: 2px;
+  }
+  nav.hamburger li a {
+    text-decoration: none;
+    color: white;
+    background: black;
+    padding: 2px 5px;
+    border: 1px solid black;
+    display: block;
+    text-align: center;
+  }
+  nav.hamburger li:last-child {
+    margin-bottom: 0;
+  }
 }
