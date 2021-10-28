@@ -530,6 +530,10 @@ div .syntax {
     letter-spacing: 0;
   }
 
+  h2 {
+    margin-left: -40px;
+  }
+
   .header-sub {
     padding-top: 10px;
   }
@@ -553,11 +557,11 @@ div .syntax {
   }
 
   #imageb {
-    max-width: 300px;
+    max-width: 250px;
   }
 
   .headline {
-    margin-top: 0;
+    margin-top: -10px;
   }
 
   header {
@@ -576,7 +580,7 @@ div .syntax {
     display: none;
     position: relative;
     top: 60px;
-    left: -55px;
+    left: -19px;
   }
 
   input#hamburger-menu {
@@ -599,11 +603,10 @@ div .syntax {
     margin: 0px;
     width: 300px;
     background-color: rgb(0, 0, 0);
-    overflow: scroll;
   }
 
   nav.hamburger li {
-    font-size: 2rem;
+    font-size: 1.3rem;
     margin-bottom: 2px;
   }
 
