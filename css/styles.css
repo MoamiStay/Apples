@@ -173,6 +173,11 @@ form {
   border-radius: 1em;
 }
 
+#form {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -519,13 +524,24 @@ div .syntax {
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1rem;
+    padding-top: 30px;
     margin-left: 30px;
     letter-spacing: 0;
   }
 
+  .header-sub {
+    padding-top: 10px;
+  }
+
   #moa {
     display: none;
+  }
+
+  #mob-moa {
+    color: hotpink;
+    font-size: 1rem;
+    font-family: "Press Start 2P", Verdana, Geneva, Tahoma, sans-serif;
   }
 
   nav {
@@ -559,9 +575,8 @@ div .syntax {
   nav.hamburger {
     display: none;
     position: relative;
-    top: 0px;
-    left: -18px;
-    /* By default hide the navigation menu */
+    top: 60px;
+    left: -55px;
   }
 
   input#hamburger-menu {
@@ -582,12 +597,16 @@ div .syntax {
     display: inline-block;
     padding: 0px;
     margin: 0px;
-    width: 120px;
+    width: 300px;
     background-color: rgb(0, 0, 0);
+    overflow: scroll;
   }
+
   nav.hamburger li {
+    font-size: 2rem;
     margin-bottom: 2px;
   }
+
   nav.hamburger li a {
     text-decoration: none;
     color: white;
