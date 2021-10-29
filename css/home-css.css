@@ -1,89 +1,129 @@
 body {
-  background-color: black;
-  margin: 0;
-  padding: 0;
   background-image: url(../images/home/finalish.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(100px, 1fr);
+  gap: 10px;
+  grid-template-areas:
+    "myheader myheader myheader"
+    "mynav mynav mynav"
+    "mymain mymain mymain"
+    "myfooter myfooter myfooter";
+}
+
+header {
+  grid-area: myheader;
+}
+
+nav {
+  grid-area: mynav;
+}
+
+main {
+  grid-area: mymain;
+}
+
+footer {
+  grid-area: myfooter;
+  background-color: cadetblue;
+}
+
+h1,
+h2 {
+  font-family: "Julius Sans One", sans-serif;
+  color: azure;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+img {
   max-width: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: rgb(166, 141, 173);
+  padding: 10px 0;
+}
+
+a:hover {
+  color: cadetblue;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE */
 
 #logo {
-  max-width: 100%;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-#playground_link {
+#nav_top {
+  background-color: azure;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-family: "Julius Sans One", sans-serif;
+  position: sticky;
+  top: 0;
+}
+
+#nav_top li:last-child {
   font-family: "Press Start 2P", cursive;
   font-size: 1.3rem;
   color: rgb(75, 26, 87);
 }
 
-#playground_link:hover {
-  color: black;
-}
-
-.top_menu ul {
-  list-style-type: none;
-  padding: 0;
-  background-color: azure;
-  padding: 15px 0 15px 0;
-  margin-top: 70px;
-  text-align: center;
-}
-
-.top_menu li {
-  display: inline-block;
-  margin-right: 50px;
-}
-
-.top_menu a {
-  text-decoration: none;
-  width: 150px;
-  display: inline-block;
-  text-align: center;
+.poem_doves {
   font-size: 1.5rem;
-  color: rgb(166, 141, 173);
-  font-family: "Julius Sans One", sans-serif;
-}
-
-.top_menu a:hover {
-  color: cadetblue;
-  transition: color 0.2s ease-in-out;
-  text-decoration: underline;
-}
-
-h1 {
-  font-family: "Julius Sans One", sans-serif;
   text-align: center;
-  margin-top: 100px;
-  color: white;
-  font-size: 2.5rem;
+  padding: 70px 0;
 }
 
-.bulk-text p {
-  text-align: center;
-  margin-top: 47px;
-  font-size: 1.3rem;
+.birdbox {
+  display: inline-block;
+  position: relative;
+  bottom: -14px;
+  left: 0;
 }
 
-.bulk-text:first-child {
-  margin-top: 250px;
+#bird {
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
 }
+
+/* MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC */
 
 .artist-list {
-  margin-top: 70px;
+  display: grid;
   max-width: 100%;
-  height: auto;
-}
-
-.artist-list li {
-  display: inline-block;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto;
 }
 
 .artist-list li figure {
-  width: 400px;
-  margin-top: 50px;
+  margin-top: 40px;
   box-sizing: border-box;
 }
 
@@ -97,7 +137,7 @@ h1 {
 .artist-list figcaption {
   border-radius: 2%;
   text-align: center;
-  background-color: white;
+  background-color: azure;
   font-family: "Dosis", sans-serif;
 }
 
@@ -107,7 +147,7 @@ h1 {
   font-family: "Dosis", sans-serif;
   background-color: cadetblue;
   padding: 5px 0 5px 0;
-  color: white;
+  color: azure;
 }
 
 .artist-list summary {
@@ -117,6 +157,10 @@ h1 {
   font-family: "Julius Sans One", sans-serif;
   padding: 15px 0 15px 0;
   margin-top: 10px;
+}
+
+#whysolong {
+  font-size: 1.3rem;
 }
 
 .artist-list summary:hover {
@@ -134,18 +178,17 @@ h1 {
 }
 
 .tracks {
-  display: inline-block;
   width: 50%;
   float: left;
   height: 300px;
+  overflow: auto;
 }
 
 .tracks ul {
-  padding-left: 0px;
+  padding: 0;
 }
 
 .album {
-  display: inline-block;
   width: 50%;
   float: right;
   height: 300px;
@@ -179,7 +222,47 @@ h1 {
   display: block;
 }
 
-footer {
-  background-color: black;
-  color: bisque;
+/* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url(../images/home/finalish.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Dosis", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(100px, 1fr);
+    gap: 10px;
+    grid-template-areas:
+      "myheader"
+      "mynav"
+      "mymain"
+      "myfooter";
+  }
+
+  #logo {
+    margin: 0;
+  }
+
+  #nav_top ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #nav_top ul li {
+    justify-content: center;
+  }
+
+  .artist-list {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+}
+
+@media screen and (min-width: 601px) {
 }
