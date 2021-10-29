@@ -115,6 +115,115 @@ ul li {
 
 /* MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC */
 
+.artist-list {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto;
+}
+
+.artist-list li figure {
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+.artist-list li figure img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 2%;
+}
+
+.artist-list figcaption {
+  border-radius: 2%;
+  text-align: center;
+  background-color: azure;
+  font-family: "Dosis", sans-serif;
+}
+
+.artist-list h3 {
+  font-size: large;
+  text-align: left;
+  font-family: "Dosis", sans-serif;
+  background-color: cadetblue;
+  padding: 5px 0 5px 0;
+  color: azure;
+}
+
+.artist-list summary {
+  list-style-type: none;
+  font-size: 1.5rem;
+  color: black;
+  font-family: "Julius Sans One", sans-serif;
+  padding: 15px 0 15px 0;
+  margin-top: 10px;
+}
+
+#whysolong {
+  font-size: 1.3rem;
+}
+
+.artist-list summary:hover {
+  background-color: cadetblue;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.artist-list .top10 li {
+  display: block;
+  text-align: left;
+  list-style-type: none;
+  font-family: "Dosis", sans-serif;
+}
+
+.tracks {
+  width: 50%;
+  float: left;
+  height: 300px;
+  overflow: auto;
+}
+
+.tracks ul {
+  padding: 0;
+}
+
+.album {
+  width: 50%;
+  float: right;
+  height: 300px;
+}
+
+.album h3 {
+  text-align: center;
+}
+
+.album .pic {
+  width: 100%;
+  height: auto;
+}
+
+.tracks h3 {
+  text-align: center;
+}
+
+.album .pic img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+.additional h3 {
+  margin-top: 300px;
+  text-align: center;
+}
+
+.additional {
+  display: block;
+}
+
+/* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
+
 @media screen and (max-width: 600px) {
   body {
     background-image: url(../images/home/finalish.jpg);
@@ -145,6 +254,13 @@ ul li {
 
   #nav_top ul li {
     justify-content: center;
+  }
+
+  .artist-list {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
   }
 }
 
