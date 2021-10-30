@@ -734,6 +734,9 @@ NAME = is used to label the info that is sent (user_name: Name)
       <h3>FLEX</h3>
       <a href="https://jonitrythall.com/flexbox-cheatsheet"
       >Useful cheatsheet for flex</a>
+
+      <p> </p>
+      <p>DISPLAY: FLEX</p>
       <div class="flexx">
         <div class="box">BOX 1</div>
         <div class="box">BOX 2</div>
@@ -742,9 +745,10 @@ NAME = is used to label the info that is sent (user_name: Name)
         <div class="box">BOX 5</div>
         <div class="box6">BOX 6</div>
       </div>
-      <p>DISPLAY: FLEX</p>
       <p>Set display: flex on the container. Use flex: [number] to decide the amount of space each element will take.</p>
 
+      <p> </p>
+      <p>FLEX-DIRECTION: </p>
       <div class="flex-direction">
         <div class="boxd">BOX 1</div>
         <div class="boxd">BOX 2</div>
@@ -753,9 +757,16 @@ NAME = is used to label the info that is sent (user_name: Name)
         <div class="boxd">BOX 5</div>
         <div class="boxd">BOX 6</div>
       </div>
-      <p>FLEX-DIRECTION: </p>
-      <p>Set flex-direction: column/row. use row-reverse and column-reverse instead to get the opposite order.</p>
+      <p> </p>
+      <pre class="syntax">
+      flex-direction: column;
+      felx-direction: row;
+      felx-direction: row-reverse;
+      felx-direction: column-reverse;
+      </pre>
 
+      <p> </p>
+      <p>FLEX: WRAP</p>
       <div class="flex-wrap">
         <div class="boxw">BOX 1</div>
         <div class="boxw">BOX 2</div>
@@ -764,11 +775,18 @@ NAME = is used to label the info that is sent (user_name: Name)
         <div class="boxw">BOX 5</div>
         <div class="boxw">BOX 6</div>
       </div>
-      <p>FLEX: WRAP</p>
-      <p>I DONT UNDERSTAND. HELP.</p>
+      <p> </p>
+      <pre class="syntax">
+        flex-wrap: wrap;
+        felx-wrap: nowrap; (DEFAULT)
+        felx-wrap: wrap-reverse;
+        </pre>
 
-      <p>ORDER</p>
-
+      <p> </p>
+      <p>FLEX: FLOW</p>
+      <p>Shorthand for setting both flex-direction and flex-wrap properties</p>
+     
+      <p> </p>
       <p>JUSTIFY-CONTENT</p>
       <div class="justifyx">
         <div class="boxj">BOX 1</div>
@@ -778,7 +796,61 @@ NAME = is used to label the info that is sent (user_name: Name)
         <div class="boxj">BOX 5</div>
         <div class="boxj">BOX 6</div>
       </div>
-      <p>justify-content values: center, start/end, space-between/space-around/space-evenly</p>
+      <p> </p>
+      <pre class="syntax">
+      justify-content: center;
+      justify-content: flex-start; /flex-end
+      justify-content: space-between;
+      justify-content: space-around;
+      justify-content: space-evenly;
+      </pre>
+
+      <p> </p>
+      <p>ALIGN-ITEMS</p>
+      <p>This property is used to vertically align the flex items.</p>
+      <p> </p>
+      <pre class="syntax">
+      align-items: center;
+      align-items: flex-start;
+      align-items: flex-end;
+      align-items: stretch;
+      align-items: baseline;
+      </pre>
+
+      <p> </p>
+      <p>ALIGN-CONTENT</p>
+      <p> This property is used to align the flex lines</p>
+      <pre class="syntax">
+      align-content: space-between;
+      align-content: space-around;
+      align-content: stretch;
+      align-content: center;
+      align-content: flex-start;
+      align-content: flex-end;
+      </pre>
+
+      <p> </p>
+      <p>Child Elements (Items): automagically becomes flexible items.</p>
+      <p>Flex item properties:</p>
+      <pre class="syntax">
+      order
+      flex-grow
+      flex-shrink
+      flex-basis
+
+      shorthand: (flex = flex-grow, flex-shrink, flex-basis)
+      flex: 0 0 240px
+      </pre>
+      
+      <p> </p>
+      <p>ALIGN-SELF</p>
+      <p>This property specifies the alignment for the selected item inside the flexible container.</p>
+      <p>This overrides the default alignment set by the container's align-items property.</p>
+
+      <p> </p>
+      <img src="images/undefined/flexcheat1.jpg" alt="flex cheat sheet">
+      <img src="images/undefined/flexcheat2.jpg" alt="flex cheat sheet">
+
       <h3>GRIDS</h3>
       <div class="gridx">
         <div class="boxg">BOX 1</div>
@@ -788,6 +860,7 @@ NAME = is used to label the info that is sent (user_name: Name)
         <div class="boxg">BOX 5</div>
         <div class="boxg">BOX 6</div>
       </div>
+
       <p>DISPLAY: GRID</p>
 
       <div class="grid_body">

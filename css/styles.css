@@ -121,7 +121,7 @@ div {
   background-color: rgb(185, 185, 185);
   color: rgb(39, 39, 39);
   margin: 0;
-  padding-top: 10px;
+  padding: 10px 20px 0 0;
 }
 
 .topics:nth-child(odd) {
