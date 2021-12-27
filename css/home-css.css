@@ -2,6 +2,7 @@ body {
   background-image: url(../images/home/finalish.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 0;
 }
 
 * {
@@ -13,12 +14,14 @@ body {
 
 p,
 table td,
-h3 {
+h3,
+h1 {
   font-family: "Averia Serif Libre", cursive;
 }
 
 h2,
-section a {
+section a,
+h4 {
   font-family: "Fredericka the Great", cursive;
 }
 
@@ -28,6 +31,10 @@ section a {
 /* FONTS END */
 
 /* HEADER */
+
+#nav_top {
+  display: none;
+}
 
 #logo {
   max-width: 100%;
@@ -54,8 +61,24 @@ section a {
 
 /* HEADER END */
 
+.container {
+  padding: 15px 0;
+}
+
 .container img {
   max-width: 100%;
+}
+
+.container h3 {
+  text-align: center;
+  margin: 0;
+  color: rgb(36, 0, 35);
+  font-size: 1.3rem;
+}
+
+#achievements .container,
+#interests .container {
+  border: 10px solid azure;
 }
 
 .imgbox img {
@@ -67,18 +90,23 @@ section a {
 table {
   margin: 0;
   margin: auto;
-  padding: 15px;
   border: 3px solid azure;
 }
 
 table td,
-section a,
-section h2 {
+a,
+h2,
+pre,
+h3,
+footer,
+h1,
+p,
+h4 {
   padding: 5px 10px;
 }
 
 .headline {
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   color: rgb(36, 0, 35);
   text-transform: uppercase;
   display: block;
@@ -86,11 +114,47 @@ section h2 {
   font-weight: normal;
 }
 
+.breadcrumb p {
+  margin: 2px;
+}
+
+.breadcrumb h4 {
+  font-size: 1.3rem;
+}
+
+#breadcrumbs {
+  background-image: repeating-linear-gradient(
+    azure,
+    azure,
+    pink,
+    pink,
+    rgb(216, 83, 105),
+    rgb(146, 33, 52),
+    rgb(90, 11, 24),
+    rgb(90, 11, 24)
+  );
+}
+
+.text {
+  background: -webkit-linear-gradient(black, black, black, azure, azure, azure);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* FOOTER */
 
 footer {
-  background-color: rgb(36, 0, 35);
+  background-image: repeating-linear-gradient(
+    rgb(90, 11, 24),
+    rgb(27, 0, 5),
+    black
+  );
   color: pink;
+  padding-top: 50px;
+}
+
+footer p {
+  margin: 0;
 }
 
 /* FOOTER END */
