@@ -22,12 +22,25 @@ footer p {
 
 h1 {
   text-align: center;
-  margin: auto;
+  margin: 200px auto;
 }
 
 #nav_top ul,
 .bucket ul {
   padding: 0;
+}
+
+.link {
+  font-size: 1.1rem;
+  color: rgb(36, 0, 35);
+  font-style: italic;
+  text-decoration: none;
+}
+
+.link:hover {
+  font-size: 1.2rem;
+  color: rgb(66, 0, 64);
+  text-decoration: underline;
 }
 
 /* FONTS */
@@ -37,7 +50,8 @@ table td,
 h3,
 h1,
 caption,
-.bucket li {
+.bucket li,
+.link {
   font-family: "Averia Serif Libre", cursive;
 }
 
@@ -329,6 +343,7 @@ footer {
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
     grid-template-areas:
+      "balloon balloon balloon balloon"
       " . . . . "
       "achievement achievement interest interest"
       "topten topten poem dream"
@@ -357,5 +372,9 @@ footer {
 
   #breadcrumbs {
     grid-area: bread;
+  }
+
+  .balloon {
+    grid-area: balloon;
   }
 }
