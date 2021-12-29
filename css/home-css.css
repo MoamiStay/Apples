@@ -2,7 +2,6 @@ body {
   background-image: url(../images/home/finalish.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin: 0;
 }
 
 * {
@@ -10,12 +9,29 @@ body {
   list-style-type: none;
 }
 
+body,
+.container h3,
+table,
+footer p {
+  margin: 0;
+}
+
+.auto-margin {
+  margin: auto;
+}
+
+#nav_top ul,
+.bucket ul {
+  padding: 0;
+}
+
 /* FONTS */
 
 p,
 table td,
 h3,
-h1 {
+h1,
+caption {
   font-family: "Averia Serif Libre", cursive;
 }
 
@@ -43,7 +59,6 @@ h4 {
 #nav_top ul {
   display: flex;
   justify-content: center;
-  padding: 0;
   background-color: azure;
 }
 
@@ -65,20 +80,23 @@ h4 {
   padding: 15px 0;
 }
 
+.whitebg {
+  background-color: rgb(240, 255, 255, 0.3);
+}
+
 .container img {
   max-width: 100%;
 }
 
 .container h3 {
   text-align: center;
-  margin: 0;
   color: rgb(36, 0, 35);
   font-size: 1.3rem;
 }
 
 #achievements .container,
 #interests .container {
-  border: 10px solid azure;
+  border: 1px solid azure;
 }
 
 .imgbox img {
@@ -87,14 +105,17 @@ h4 {
   object-fit: cover;
 }
 
+.poem-section img {
+  max-width: 300px;
+}
+
 table {
-  margin: 0;
   margin: auto;
   border: 3px solid azure;
 }
 
 table td,
-a,
+section a,
 h2,
 pre,
 h3,
@@ -120,19 +141,34 @@ h4 {
 
 .breadcrumb h4 {
   font-size: 1.3rem;
+  margin-bottom: 0;
 }
 
 #breadcrumbs {
-  background-image: repeating-linear-gradient(
-    azure,
-    azure,
-    pink,
-    pink,
-    rgb(216, 83, 105),
-    rgb(146, 33, 52),
-    rgb(90, 11, 24),
-    rgb(90, 11, 24)
+  background: linear-gradient(
+    0deg,
+    rgba(45, 0, 17),
+    rgba(85, 6, 35),
+    rgba(124, 11, 53),
+    rgba(163, 16, 71),
+    rgba(209, 22, 92),
+    rgba(251, 88, 150),
+    rgba(250, 111, 165),
+    rgba(248, 138, 181),
+    rgba(246, 168, 200),
+    rgba(244, 195, 217),
+    rgba(242, 225, 236),
+    rgba(240, 255, 255, 0.5),
+    rgba(240, 255, 255, 0.5),
+    transparent,
+    transparent,
+    transparent
   );
+}
+
+.bucket {
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .text {
@@ -144,23 +180,131 @@ h4 {
 /* FOOTER */
 
 footer {
-  background-image: repeating-linear-gradient(
-    rgb(90, 11, 24),
-    rgb(27, 0, 5),
-    black
-  );
+  background-image: repeating-linear-gradient(rgba(45, 0, 17), black);
   color: pink;
   padding-top: 50px;
 }
 
-footer p {
-  margin: 0;
-}
-
 /* FOOTER END */
 
-@media screen and (max-width: 600px) {
+/* ACHIEVEMENTS */
+
+.section-spacing {
+  padding: 200px 0;
 }
 
-@media screen and (min-width: 601px) {
+/* ACHIEVEMENTS END */
+
+/* POEMS */
+
+.poem-page pre {
+  padding-left: 100px;
+}
+
+.poem-page h3 {
+  display: inline-block;
+  padding-left: 170px;
+}
+
+/* POEMS END */
+
+@media screen and (min-width: 640px) {
+  body {
+    margin: 0 20px;
+  }
+  #nav_top {
+    display: block;
+  }
+
+  .imgbox img {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .poem-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .poem-section img {
+    max-width: 50%;
+  }
+
+  .auto-margin {
+    max-width: 70%;
+  }
+}
+
+@media screen and (min-width: 1007px) {
+  #nav_top {
+    display: block;
+  }
+
+  .auto-margin {
+    /* This is the margin for the small-theme pages. interests, achievements etc.. */
+    max-width: 50%;
+  }
+
+  .headline {
+    font-size: 2rem;
+    min-height: 80px;
+    text-align: center;
+    color: rgb(36, 0, 35);
+    text-transform: uppercase;
+    display: block;
+    background-color: azure;
+    font-weight: normal;
+  }
+
+  #achievements .imgbox img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .poem-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text {
+    /* This is the breadcrumbs section. all the individual texts*/
+    display: flex;
+  }
+
+  #home {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      " . . . . "
+      "achievement achievement achievement achievement"
+      "topten interest poem dream"
+      "bread bread bread bread";
+  }
+
+  #top-10 {
+    grid-area: topten;
+  }
+
+  #achievements {
+    grid-area: achievement;
+  }
+
+  #interests {
+    grid-area: interest;
+  }
+
+  #poems {
+    grid-area: poem;
+  }
+
+  #dreams {
+    grid-area: dream;
+  }
+
+  #breadcrumbs {
+    grid-area: bread;
+  }
 }
