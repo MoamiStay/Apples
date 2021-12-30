@@ -9,40 +9,6 @@ body {
   list-style-type: none;
 }
 
-body,
-.container h3,
-table,
-footer p {
-  margin: 0;
-}
-
-.auto-margin {
-  margin: auto;
-}
-
-h1 {
-  text-align: center;
-  margin: 200px auto;
-}
-
-#nav_top ul,
-.bucket ul {
-  padding: 0;
-}
-
-.link {
-  font-size: 1.1rem;
-  color: rgb(36, 0, 35);
-  font-style: italic;
-  text-decoration: none;
-}
-
-.link:hover {
-  font-size: 1.2rem;
-  color: rgb(66, 0, 64);
-  text-decoration: underline;
-}
-
 /* FONTS */
 
 p,
@@ -61,7 +27,8 @@ h4 {
   font-family: "Fredericka the Great", cursive;
 }
 
-#nav_top ul li {
+#nav_top ul li,
+summary {
   font-family: "Julius Sans One", sans-serif;
 }
 /* FONTS END */
@@ -96,12 +63,52 @@ h4 {
 
 /* HEADER END */
 
-.container {
-  padding: 15px 0;
+/* FOOTER */
+
+footer {
+  background-image: repeating-linear-gradient(rgba(45, 0, 17), black);
+  color: pink;
+  padding-top: 50px;
 }
 
-.whitebg {
-  background-color: rgb(240, 255, 255, 0.3);
+/* FOOTER END */
+
+body,
+.container h3,
+table,
+footer p {
+  margin: 0;
+}
+
+.auto-margin {
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 200px auto;
+}
+
+#nav_top ul,
+.bucket ul {
+  padding: 0;
+}
+
+.link {
+  font-size: 1.1rem;
+  color: rgb(36, 0, 35);
+  font-style: italic;
+  text-decoration: none;
+}
+
+.link:hover {
+  font-size: 1.2rem;
+  color: rgb(66, 0, 64);
+  text-decoration: underline;
+}
+
+.container {
+  padding: 15px 0;
 }
 
 .container img {
@@ -117,6 +124,10 @@ h4 {
 #achievements .container,
 #interests .container {
   border: 1px solid azure;
+}
+
+.whitebg {
+  background-color: rgb(240, 255, 255, 0.3);
 }
 
 .imgbox img {
@@ -199,24 +210,6 @@ h4 {
   -webkit-text-fill-color: transparent;
 }
 
-/* FOOTER */
-
-footer {
-  background-image: repeating-linear-gradient(rgba(45, 0, 17), black);
-  color: pink;
-  padding-top: 50px;
-}
-
-/* FOOTER END */
-
-/* ACHIEVEMENTS */
-
-.section-spacing {
-  padding: 200px 0;
-}
-
-/* ACHIEVEMENTS END */
-
 /* POEMS */
 
 .poem-page pre {
@@ -227,6 +220,8 @@ footer {
   display: inline-block;
   padding-left: 170px;
 }
+
+/* POEMS END */
 
 .me-colorpalette {
   -webkit-text-fill-color: black;
@@ -263,7 +258,64 @@ footer {
   text-align: center;
 }
 
-/* POEMS END */
+.section-spacing {
+  padding: 200px 0;
+}
+/* MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC */
+
+.artist-list summary {
+  background-color: azure;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.4rem;
+  border-radius: 10px;
+}
+
+.album .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album img {
+  max-width: 70%;
+}
+
+.album figcaption {
+  text-align: center;
+}
+
+.additional {
+  margin: 22.5px;
+}
+
+figure img {
+  border-radius: 10px;
+}
+
+.artist-info {
+  background-color: azure;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "tracks album"
+    "addi addi";
+}
+
+.tracks {
+  grid-area: tracks;
+}
+
+.album {
+  grid-area: album;
+}
+
+.additional {
+  grid-area: addi;
+}
 
 @media screen and (min-width: 640px) {
   body {
@@ -346,7 +398,7 @@ footer {
       "balloon balloon balloon balloon"
       " . . . . "
       "achievement achievement interest interest"
-      "topten topten poem dream"
+      "poem topten topten dream"
       "bread bread bread bread";
   }
 
