@@ -85,6 +85,10 @@ footer p {
   margin: auto;
 }
 
+.articles {
+  margin: auto;
+}
+
 h1 {
   text-align: center;
   margin: 100px auto;
@@ -305,11 +309,15 @@ figure img {
   margin-top: 10px;
   border-radius: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 40%;
   grid-template-rows: auto;
   grid-template-areas:
     "tracks album"
     "addi addi";
+}
+
+.artist-info ul {
+  padding: 15px;
 }
 
 .tracks {
@@ -346,6 +354,10 @@ figure img {
     max-width: 70%;
   }
 
+  .articles {
+    width: 90%;
+  }
+
   .text {
     /* This is the breadcrumbs section. all the individual texts*/
     display: grid;
@@ -371,7 +383,8 @@ figure img {
     object-fit: cover;
   }
 
-  .artist-list summary {
+  .artist-list summary,
+  .artist-list details {
     max-width: 320px;
   }
 }
@@ -388,6 +401,10 @@ figure img {
   .auto-margin {
     /* This is the margin for the small-theme pages. interests, achievements etc.. */
     max-width: 50%;
+  }
+
+  .articles {
+    width: 60%;
   }
 
   .headline {
