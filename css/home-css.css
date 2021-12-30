@@ -57,8 +57,9 @@ summary {
   color: rgb(36, 0, 35);
 }
 
-#nav_top a:hover {
+#nav_top a:active {
   color: pink;
+  font-size: 0.95rem;
 }
 
 /* HEADER END */
@@ -86,7 +87,7 @@ footer p {
 
 h1 {
   text-align: center;
-  margin: 200px auto;
+  margin: 100px auto;
 }
 
 #nav_top ul,
@@ -165,6 +166,11 @@ h4 {
   display: block;
   background-color: azure;
   font-weight: normal;
+}
+
+.head-link:active {
+  font-size: 3.45rem;
+  color: pink;
 }
 
 .breadcrumb p {
@@ -269,6 +275,7 @@ h4 {
   padding: 15px;
   font-size: 1.4rem;
   border-radius: 10px;
+  max-width: 100%;
 }
 
 .album .container {
@@ -351,11 +358,31 @@ figure img {
       "no-day no-day"
       "bucket bucket";
   }
+
+  .artist-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .artist-photo {
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+  }
+
+  .artist-list summary {
+    max-width: 320px;
+  }
 }
 
 @media screen and (min-width: 1007px) {
   #nav_top {
     display: block;
+  }
+
+  #nav_top a:hover {
+    color: pink;
   }
 
   .auto-margin {
@@ -372,6 +399,11 @@ figure img {
     display: block;
     background-color: azure;
     font-weight: normal;
+  }
+
+  .head-link:hover {
+    font-size: 2.05rem;
+    color: pink;
   }
 
   #achievements .imgbox img {
@@ -428,5 +460,11 @@ figure img {
 
   .balloon {
     grid-area: balloon;
+  }
+
+  .artist-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
   }
 }
