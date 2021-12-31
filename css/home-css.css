@@ -81,12 +81,14 @@ footer p {
   margin: 0;
 }
 
-.auto-margin {
+.auto-margin,
+.articles {
   margin: auto;
 }
 
-.articles {
-  margin: auto;
+.album figcaption,
+.text-align {
+  text-align: center;
 }
 
 h1 {
@@ -290,10 +292,6 @@ h4 {
 
 .album img {
   max-width: 70%;
-}
-
-.album figcaption {
-  text-align: center;
 }
 
 .additional {
