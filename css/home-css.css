@@ -11,6 +11,10 @@ body {
 
 /* FONTS */
 
+#playground_link {
+  font-family: "Press Start 2P", Verdana, Geneva, Tahoma;
+}
+
 p,
 table td,
 h3,
@@ -82,7 +86,8 @@ footer p {
 }
 
 .auto-margin,
-.articles {
+.articles,
+header {
   margin: auto;
 }
 
@@ -134,7 +139,15 @@ h1 {
 }
 
 .whitebg {
-  background-color: rgb(240, 255, 255, 0.3);
+  background: -webkit-linear-gradient(
+    transparent,
+    rgb(240, 255, 255, 0.3),
+    rgb(240, 255, 255, 0.3),
+    rgb(240, 255, 255, 0.3),
+    rgb(240, 255, 255, 0.3),
+    rgb(240, 255, 255, 0.3),
+    rgb(240, 255, 255, 0.3)
+  );
 }
 
 .imgbox img {
@@ -157,7 +170,6 @@ section a,
 h2,
 pre,
 h3,
-footer,
 h1,
 p,
 h4 {
@@ -348,12 +360,15 @@ figure img {
     max-width: 50%;
   }
 
-  .auto-margin {
-    max-width: 70%;
+  .auto-margin,
+  .articles,
+  header {
+    max-width: 95%;
   }
 
-  .articles {
-    width: 90%;
+  .small-img {
+    max-width: 60%;
+    margin: auto;
   }
 
   .text {
@@ -388,6 +403,17 @@ figure img {
 }
 
 @media screen and (min-width: 1007px) {
+  body {
+    margin: 0;
+  }
+
+  header,
+  main,
+  footer {
+    width: 1000px;
+    margin: auto;
+  }
+
   #nav_top {
     display: block;
   }
@@ -398,7 +424,8 @@ figure img {
 
   .auto-margin {
     /* This is the margin for the small-theme pages. interests, achievements etc.. */
-    max-width: 50%;
+    width: 1000px;
+    margin: auto;
   }
 
   .articles {
