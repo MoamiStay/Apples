@@ -32,7 +32,8 @@ h4 {
 }
 
 #nav_top ul li,
-summary {
+summary,
+#hundred-countries {
   font-family: "Julius Sans One", sans-serif;
 }
 /* FONTS END */
@@ -110,13 +111,11 @@ h1 {
   font-size: 1.1rem;
   color: rgb(36, 0, 35);
   font-style: italic;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .link:hover {
-  font-size: 1.2rem;
-  color: rgb(66, 0, 64);
-  text-decoration: underline;
+  color: azure;
 }
 
 .container {
@@ -364,11 +363,6 @@ figure img {
   .articles,
   header {
     max-width: 95%;
-  }
-
-  .small-img {
-    max-width: 60%;
-    margin: auto;
   }
 
   .text {
