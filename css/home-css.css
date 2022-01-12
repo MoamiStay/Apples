@@ -373,7 +373,8 @@ figure img {
     grid-template-areas:
       " . ."
       " . ."
-      " . . "
+      " . ."
+      " . ."
       "no-day no-day"
       "bucket bucket";
   }
@@ -451,6 +452,7 @@ figure img {
     /* This is the breadcrumbs section. all the individual texts*/
     grid-template-columns: 33.3% 33.3% 33.3%;
     grid-template-areas:
+      " . . . "
       " . . . "
       " . . . "
       "no-day no-day no-day "
