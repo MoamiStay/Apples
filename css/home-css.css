@@ -132,6 +132,21 @@ h1 {
   font-size: 1.3rem;
 }
 
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 #achievements .container,
 #interests .container {
   border: 1px solid azure;
