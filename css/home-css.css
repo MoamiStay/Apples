@@ -33,12 +33,50 @@ h4 {
 
 #nav_top ul li,
 summary,
-#hundred-countries {
+#hundred-countries,
+.phone-pooper ul li {
   font-family: "Julius Sans One", sans-serif;
 }
 /* FONTS END */
 
 /* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  background: azure;
+}
+
+#hamburger-menu,
+nav {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+label[for="hamburger-menu"] {
+  font-size: 2.6em;
+  position: absolute;
+  right: 15px;
+  top: 8px;
+}
+
+.phone-pooper ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.phone-pooper ul li {
+  padding: 7px 0;
+}
+
+.phone-pooper ul li a {
+  color: black;
+}
 
 #nav_top {
   display: none;
@@ -378,8 +416,18 @@ figure img {
   body {
     margin: 0 20px;
   }
+
+  header {
+    position: static;
+    background-color: transparent;
+  }
+
   #nav_top {
     display: block;
+  }
+
+  .phone-pooper {
+    display: none;
   }
 
   .imgbox img {
