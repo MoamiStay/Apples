@@ -147,11 +147,6 @@ h1 {
   left: 0;
 }
 
-#achievements .container,
-#interests .container {
-  border: 1px solid azure;
-}
-
 .whitebg {
   background: -webkit-linear-gradient(
     transparent,
@@ -308,6 +303,12 @@ h4 {
   font-size: 1.4rem;
   border-radius: 10px;
   max-width: 100%;
+  cursor: pointer;
+}
+
+.artist-list summary:hover {
+  background-color: cadetblue;
+  color: white;
 }
 
 .album .container {
@@ -321,11 +322,17 @@ h4 {
 }
 
 .additional {
-  margin: 22.5px;
+  margin: 0 5px 10px 5px;
 }
 
 figure img {
   border-radius: 10px;
+}
+
+.artist-list .artist-info h3 {
+  text-align: left;
+  font-size: 1rem;
+  padding-top: 20px;
 }
 
 .artist-info {
@@ -356,6 +363,17 @@ figure img {
   grid-area: addi;
 }
 
+.additional p,
+.tracks li {
+  margin: 5px 0;
+  font-size: 0.83rem;
+}
+
+.additional p:nth-child(2),
+.additional p:nth-child(8) {
+  margin-bottom: 20px;
+}
+
 @media screen and (min-width: 640px) {
   body {
     margin: 0 20px;
@@ -380,7 +398,8 @@ figure img {
     max-width: 95%;
   }
 
-  .text {
+  .text,
+  .bubbles {
     /* This is the breadcrumbs section. all the individual texts*/
     display: grid;
     grid-template-columns: 50% 50%;
@@ -463,14 +482,15 @@ figure img {
     object-fit: cover;
   }
 
-  .text {
+  .text,
+  .bubbles {
     /* This is the breadcrumbs section. all the individual texts*/
     grid-template-columns: 33.3% 33.3% 33.3%;
     grid-template-areas:
       " . . . "
       " . . . "
       " . . . "
-      "no-day no-day no-day "
+      " . . . "
       "bucket bucket bucket ";
   }
 
