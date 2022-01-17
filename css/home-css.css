@@ -2,267 +2,590 @@ body {
   background-image: url(../images/home/finalish.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Dosis", sans-serif;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(100px, 1fr);
-  gap: 10px;
-  grid-template-areas:
-    "myheader myheader myheader"
-    "mynav mynav mynav"
-    "mymain mymain mymain"
-    "myfooter myfooter myfooter";
 }
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* FONTS */
+
+#playground_link {
+  font-family: "Press Start 2P", Verdana, Geneva, Tahoma;
+}
+
+p,
+table td,
+h3,
+h1,
+caption,
+.bucket li,
+.link {
+  font-family: "Averia Serif Libre", cursive;
+}
+
+h2,
+section a,
+h4 {
+  font-family: "Fredericka the Great", cursive;
+}
+
+#nav_top ul li,
+summary,
+#hundred-countries,
+.phone-pooper ul li {
+  font-family: "Julius Sans One", sans-serif;
+}
+/* FONTS END */
+
+/* HEADER */
 
 header {
-  grid-area: myheader;
+  position: sticky;
+  top: 0;
+  background: azure;
 }
 
+#hamburger-menu,
 nav {
-  grid-area: mynav;
+  display: none;
 }
 
-main {
-  grid-area: mymain;
+#hamburger-menu:checked ~ nav {
+  display: block;
 }
+
+label[for="hamburger-menu"] {
+  font-size: 2.6em;
+  position: absolute;
+  right: 15px;
+  top: 8px;
+}
+
+.phone-pooper ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.phone-pooper ul li {
+  padding: 7px 0;
+}
+
+.phone-pooper ul li a {
+  color: black;
+}
+
+#nav_top {
+  display: none;
+}
+
+#logo {
+  max-width: 100%;
+}
+
+#nav_top ul {
+  display: flex;
+  justify-content: center;
+  background-color: azure;
+}
+
+#nav_top li {
+  padding: 10px 20px;
+}
+
+#nav_top a {
+  color: rgb(36, 0, 35);
+}
+
+#nav_top a:active {
+  color: pink;
+  font-size: 0.95rem;
+}
+
+/* HEADER END */
+
+/* FOOTER */
 
 footer {
-  grid-area: myfooter;
-  background-color: cadetblue;
+  background-image: repeating-linear-gradient(rgba(45, 0, 17), black);
+  color: pink;
+  padding-top: 50px;
 }
 
-h1,
-h2 {
-  font-family: "Julius Sans One", sans-serif;
-  color: azure;
+/* FOOTER END */
+
+body,
+.container h3,
+table,
+footer p {
+  margin: 0;
+}
+
+.auto-margin,
+.articles,
+header {
+  margin: auto;
+}
+
+.album figcaption,
+.text-align {
+  text-align: center;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.5rem;
+  margin: 100px auto;
 }
 
-img {
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(166, 141, 173);
-  padding: 10px 0;
-}
-
-a:hover {
-  color: cadetblue;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
+#nav_top ul,
+.bucket ul {
   padding: 0;
 }
 
-ul li {
-  display: inline-block;
-  padding: 0 10px;
+.link {
+  font-size: 1.1rem;
+  color: rgb(36, 0, 35);
+  font-style: italic;
+  text-decoration: underline;
 }
 
-/* HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE */
-
-#logo {
-  margin-bottom: 30px;
-}
-
-#nav_top {
-  background-color: azure;
-  text-align: center;
-  padding: 15px;
-  font-size: 1.5rem;
-  font-family: "Julius Sans One", sans-serif;
-  position: sticky;
-  top: 0;
-}
-
-#nav_top li:last-child {
-  font-family: "Press Start 2P", cursive;
-  font-size: 1.3rem;
-  color: rgb(75, 26, 87);
-}
-
-.poem_doves {
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 70px 0;
-}
-
-.birdbox {
-  display: inline-block;
-  position: relative;
-  bottom: -14px;
-  left: 0;
-}
-
-#bird {
-  display: inline-block;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/* MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC */
-
-.artist-list {
-  display: grid;
-  max-width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr auto;
-}
-
-.artist-list li figure {
-  margin-top: 40px;
-  box-sizing: border-box;
-}
-
-.artist-list li figure img {
-  width: 100%;
-  height: 370px;
-  object-fit: cover;
-  border-radius: 2%;
-}
-
-.artist-list figcaption {
-  border-radius: 2%;
-  text-align: center;
-  background-color: azure;
-  font-family: "Dosis", sans-serif;
-}
-
-.artist-list h3 {
-  font-size: large;
-  text-align: left;
-  font-family: "Dosis", sans-serif;
-  background-color: cadetblue;
-  padding: 5px 0 5px 0;
+.link:hover {
   color: azure;
 }
 
-.artist-list summary {
-  list-style-type: none;
-  font-size: 1.5rem;
-  color: black;
-  font-family: "Julius Sans One", sans-serif;
-  padding: 15px 0 15px 0;
-  margin-top: 10px;
+.container {
+  padding: 15px 0;
 }
 
-#whysolong {
+.container img {
+  max-width: 100%;
+}
+
+.container h3 {
+  text-align: center;
+  color: rgb(36, 0, 35);
   font-size: 1.3rem;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.whitebg {
+  background: -webkit-linear-gradient(
+    transparent,
+    rgb(240, 255, 255, 0.3),
+    rgb(240, 255, 255, 0.3),
+    rgb(240, 255, 255, 0.3),
+    rgb(240, 255, 255, 0.3),
+    rgb(240, 255, 255, 0.3),
+    rgb(240, 255, 255, 0.3)
+  );
+}
+
+.imgbox img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.poem-section img {
+  max-width: 300px;
+}
+
+table {
+  margin: auto;
+  border: 3px solid azure;
+}
+
+table td,
+section a,
+h2,
+pre,
+h3,
+h1,
+p,
+h4 {
+  padding: 5px 10px;
+}
+
+.headline {
+  margin-top: 60px;
+  font-size: 3.5rem;
+  color: rgb(36, 0, 35);
+  text-transform: uppercase;
+  display: block;
+  background-color: azure;
+  font-weight: normal;
+}
+
+.head-link:active {
+  font-size: 3.45rem;
+  color: pink;
+}
+
+.breadcrumb p {
+  margin: 2px;
+}
+
+.breadcrumb h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+#breadcrumbs {
+  background: linear-gradient(
+    0deg,
+    rgba(45, 0, 17),
+    rgba(85, 6, 35),
+    rgba(124, 11, 53),
+    rgba(163, 16, 71),
+    rgba(209, 22, 92),
+    rgba(251, 88, 150),
+    rgba(250, 111, 165),
+    rgba(248, 138, 181),
+    rgba(246, 168, 200),
+    rgba(244, 195, 217),
+    rgba(242, 225, 236),
+    rgba(240, 255, 255, 0.5),
+    rgba(240, 255, 255, 0.5),
+    transparent,
+    transparent,
+    transparent
+  );
+}
+
+.bucket {
+  text-align: center;
+  font-size: 1.2rem;
+  grid-area: bucket;
+}
+
+.text {
+  background: -webkit-linear-gradient(black, black, black, azure, azure, azure);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* POEMS */
+
+.poem-page pre {
+  padding-left: 100px;
+}
+
+.poem-page h3 {
+  display: inline-block;
+  padding-left: 170px;
+}
+
+/* POEMS END */
+
+.me-colorpalette {
+  -webkit-text-fill-color: black;
+  background: radial-gradient(
+    circle,
+    rgb(115, 228, 98) 2%,
+    rgba(138, 214, 224, 1) 17%,
+    rgba(132, 190, 249, 1) 40%,
+    rgba(185, 168, 246, 1) 70%,
+    rgba(255, 160, 205, 1) 100%
+  );
+}
+
+.bubble {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  border: 10px solid white;
+  border-style: dotted;
+  border-radius: 50%;
+  text-align: center;
+  padding: 30px;
+  margin: 30px auto;
+}
+
+.bubble h4 {
+  margin: 0;
+}
+
+.no-day-without {
+  grid-area: no-day;
+  text-align: center;
+}
+
+.section-spacing {
+  padding: 200px 0;
+}
+/* MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC MUSIC */
+
+.artist-list summary {
+  background-color: azure;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  max-width: 100%;
+  cursor: pointer;
 }
 
 .artist-list summary:hover {
   background-color: cadetblue;
   color: white;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
 }
 
-.artist-list .top10 li {
-  display: block;
-  text-align: left;
-  list-style-type: none;
-  font-family: "Dosis", sans-serif;
+.album .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.tracks {
-  width: 50%;
-  float: left;
-  height: 300px;
-  overflow: auto;
-}
-
-.tracks ul {
-  padding: 0;
-}
-
-.album {
-  width: 50%;
-  float: right;
-  height: 300px;
-}
-
-.album h3 {
-  text-align: center;
-}
-
-.album .pic {
-  width: 100%;
-  height: auto;
-}
-
-.tracks h3 {
-  text-align: center;
-}
-
-.album .pic img {
-  width: 70%;
-  height: auto;
-  object-fit: cover;
-}
-
-.additional h3 {
-  margin-top: 300px;
-  text-align: center;
+.album img {
+  max-width: 70%;
 }
 
 .additional {
-  display: block;
+  margin: 0 5px 10px 5px;
 }
 
-/* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
+figure img {
+  border-radius: 10px;
+}
 
-@media screen and (max-width: 600px) {
+.artist-list .artist-info h3 {
+  text-align: left;
+  font-size: 1rem;
+  padding-top: 20px;
+}
+
+.artist-info {
+  background-color: azure;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto 40%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "tracks album"
+    "addi addi";
+}
+
+.artist-info ul {
+  padding: 15px;
+}
+
+.tracks {
+  grid-area: tracks;
+}
+
+.album {
+  grid-area: album;
+}
+
+.additional {
+  grid-area: addi;
+}
+
+.additional p,
+.tracks li {
+  margin: 5px 0;
+  font-size: 0.83rem;
+}
+
+.additional p:nth-child(2),
+.additional p:nth-child(8) {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 640px) {
   body {
-    background-image: url(../images/home/finalish.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: "Dosis", sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0 20px;
+  }
+
+  header {
+    position: static;
+    background-color: transparent;
+  }
+
+  #nav_top {
+    display: block;
+  }
+
+  .phone-pooper {
+    display: none;
+  }
+
+  .imgbox img {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .poem-section img {
+    max-width: 50%;
+  }
+
+  .auto-margin,
+  .articles,
+  header {
+    max-width: 95%;
+  }
+
+  .text,
+  .bubbles {
+    /* This is the breadcrumbs section. all the individual texts*/
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(100px, 1fr);
-    gap: 10px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
     grid-template-areas:
-      "myheader"
-      "mynav"
-      "mymain"
-      "myfooter";
-  }
-
-  #logo {
-    margin: 0;
-  }
-
-  #nav_top ul {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #nav_top ul li {
-    justify-content: center;
+      " . ."
+      " . ."
+      " . ."
+      " . ."
+      "no-day no-day"
+      "bucket bucket";
   }
 
   .artist-list {
     display: grid;
-    max-width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .artist-photo {
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+  }
+
+  .artist-list summary,
+  .artist-list details {
+    max-width: 320px;
   }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 1007px) {
+  body {
+    margin: 0;
+  }
+
+  header,
+  main,
+  footer {
+    width: 1000px;
+    margin: auto;
+  }
+
+  #nav_top {
+    display: block;
+  }
+
+  #nav_top a:hover {
+    color: pink;
+  }
+
+  .auto-margin {
+    /* This is the margin for the small-theme pages. interests, achievements etc.. */
+    width: 1000px;
+    margin: auto;
+  }
+
+  .articles {
+    width: 60%;
+  }
+
+  .headline {
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(36, 0, 35);
+    text-transform: uppercase;
+    display: block;
+    background-color: azure;
+    font-weight: normal;
+  }
+
+  .head-link:hover {
+    font-size: 2.05rem;
+    color: pink;
+  }
+
+  #achievements .imgbox img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .text,
+  .bubbles {
+    /* This is the breadcrumbs section. all the individual texts*/
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-areas:
+      " . . . "
+      " . . . "
+      " . . . "
+      " . . . "
+      "bucket bucket bucket ";
+  }
+
+  #home {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "balloon balloon balloon balloon"
+      " . . . . "
+      "achievement achievement interest interest"
+      "poem topten topten dream"
+      "bread bread bread bread";
+  }
+
+  #top-10 {
+    grid-area: topten;
+  }
+
+  #achievements {
+    grid-area: achievement;
+  }
+
+  #interests {
+    grid-area: interest;
+  }
+
+  #poems {
+    grid-area: poem;
+  }
+
+  #dreams {
+    grid-area: dream;
+  }
+
+  #breadcrumbs {
+    grid-area: bread;
+  }
+
+  .balloon {
+    grid-area: balloon;
+  }
+
+  .artist-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
 }

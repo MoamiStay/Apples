@@ -1,3 +1,7 @@
 {
   "liveServer.settings.port": 5501
 }
+
+var firstname = "Sally";
+
+console.log(firstName);
