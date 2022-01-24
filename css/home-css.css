@@ -446,6 +446,10 @@ figure img {
     max-width: 95%;
   }
 
+  .articles {
+    padding-bottom: 150px;
+  }
+
   .text,
   .bubbles {
     /* This is the breadcrumbs section. all the individual texts*/
