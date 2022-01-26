@@ -281,19 +281,6 @@ h4 {
   -webkit-text-fill-color: transparent;
 }
 
-/* POEMS */
-
-.poem-page pre {
-  padding-left: 100px;
-}
-
-.poem-page h3 {
-  display: inline-block;
-  padding-left: 170px;
-}
-
-/* POEMS END */
-
 .me-colorpalette {
   -webkit-text-fill-color: black;
   background: radial-gradient(
@@ -439,6 +426,19 @@ figure img {
   .poem-section img {
     max-width: 50%;
   }
+
+  /* POEMS */
+
+  .poem-page pre {
+    padding-left: 100px;
+  }
+
+  .poem-page h3 {
+    display: inline-block;
+    padding-left: 170px;
+  }
+
+  /* POEMS END */
 
   .auto-margin,
   .articles,
